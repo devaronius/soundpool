@@ -27,13 +27,6 @@ internal val uiThreadHandler: Handler = Handler(Looper.getMainLooper())
 
 class SoundpoolPlugin : MethodCallHandler, FlutterPlugin {
     companion object {
-        @Suppress("unused")
-        @JvmStatic
-        fun registerWith(registrar: Registrar) {
-            var pool = SoundpoolPlugin()
-            pool.onRegister(registrar.context(), registrar.messenger())
-        }
-
         private const val CHANNEL_NAME = "pl.ukaszapps/soundpool"
     }
 
